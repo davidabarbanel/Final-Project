@@ -1,1 +1,20 @@
+* {
+  background-image: url ("images/1120435.jpg");
+}
 
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.rule-item {
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+}

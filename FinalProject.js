@@ -1,0 +1,2 @@
+var player
+var defender
