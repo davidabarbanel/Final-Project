@@ -8,7 +8,7 @@ var aDown = false;
 var dDown = false;
 
 
-function start(){
+function start() {
 	clear();
 	renderBackground();
 	checkKeyboardStatus();
@@ -16,5 +16,6 @@ function start(){
 	checkPlayer1_player2Collision();
 	movePlayers();
 	renderPlayers();
+}
 
 out.innerHTML = "Player Score: " + player1.score;
