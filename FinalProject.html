@@ -12,10 +12,7 @@
     <h3>Rules :</h3>
     <ol class="rule-item">
       <li>Click to Start</li>
-      <li>Use "w" to go up</li>
-      <li>Use "s" to go down</li>
-      <li>Use "d" to go right</li>
-      <li>Use "a" to go left</li>
+      <li>Use the buttons to move the player</li>
       <li>Avoid the defender</li>
       <li>Make it to the endzone to get points</li>
     </ol>
@@ -23,10 +20,14 @@
     <img id="player1" src="images/footballplayer.jpg" height="100" width="100">
     <img id="player2" src="images/download.png" height="100" width="100">
   </body>
+  !--copied--!
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <body onload="startGame()">
   <div style="text-align:center;width:480px;">
-  <button onclick="moveup()">UP</button><br><br>
-  <button onclick="moveleft()">LEFT</button>
-  <button onclick="moveright()">RIGHT</button><br><br>
-  <button onclick="movedown()">DOWN</button>
-</div>
- </html>
+    <button onclick="moveup()">UP</button><br><br>
+    <button onclick="moveleft()">LEFT</button>
+    <button onclick="moveright()">RIGHT</button><br><br>
+    <button onclick="movedown()">DOWN</button>
+  </div>
+  </body>
+  </html>
