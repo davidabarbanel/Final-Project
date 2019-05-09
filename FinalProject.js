@@ -7,7 +7,7 @@ var player2 = document.getElementById("player2")
 var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGamePiece = new component(60, 60, "yellow", 5, 100);
 		myGameArea.start();
 }
 
