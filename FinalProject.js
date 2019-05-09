@@ -7,15 +7,15 @@ var player2 = document.getElementById("player2")
 var myGamePiece;
 
 function startGame() {
-		myGamePiece = new component(30, 30, "black", 10, 120);
+    var = player1;
 		myGameArea.start();
 }
 
 var myGameArea = {
 		canvas : document.createElement("canvas"),
 		start : function() {
-				this.canvas.width = 1000;
-				this.canvas.height = 1000;
+				this.canvas.width = 100;
+				this.canvas.height = 100;
 				this.context = this.canvas.getContext("2d");
 				document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 				this.interval = setInterval(updateGameArea, 20);
