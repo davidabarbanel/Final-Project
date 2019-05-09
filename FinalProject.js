@@ -8,21 +8,10 @@ var aDown = false;
 var dDown = false;
 
 
-function start() {
-	clear();
-	renderBackground();
-	checkKeyboardStatus();
-	checkPlayersBounds();
-	checkPlayer1_player2Collision();
-	movePlayers();
-	renderPlayers();
-}
-//copied//
-
 var myGamePiece;
 
 function startGame() {
-		myGamePiece = new component(30, 30, "red", 10, 120);
+		myGamePiece = new component(30, 30, "black", 10, 120);
 		myGameArea.start();
 }
 
