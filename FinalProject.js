@@ -5,7 +5,7 @@ var player2 = document.getElementById("player2")
 var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(60, 60, "yellow", 5, 100);
+    myGamePiece = new component(img.src="images\pacman.1738412215297998675676.jpg");
 		myGameArea.start();
 }
 
