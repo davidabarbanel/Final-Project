@@ -1,5 +1,3 @@
-var canvas = document.getElementById("canvas");
-const context = canvas.getContext("2d");
 var player1 = document.getElementById("player1")
 var player2 = document.getElementById("player2")
 
