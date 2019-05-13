@@ -11,6 +11,15 @@ function startGame() {
 		myGameArea.start();
 }
 
+var myGameArea = {
+				document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+				this.interval = setInterval(updateGameArea, 20);
+		},
+		clear : function() {
+				this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+		}
+}
+
 function component(width, height, color, x, y) {
 		this.width = width;
 		this.height = height;
