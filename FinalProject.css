@@ -24,6 +24,7 @@ h3 {
 }
 
 canvas {
+border-style: double;
 border:10px solid #9E1515;
 background-color: #00FFFF;
 }
