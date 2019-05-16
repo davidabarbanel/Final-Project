@@ -21,6 +21,9 @@ var myGameArea = {
 				this.context = this.canvas.getContext("2d");
 				document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 				this.interval = setInterval(updateGameArea, 20);
+        // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
+       context.arc(100,100,20,0,Math.PI*2,true); context.closePath();
+       context.fill();
 		},
 		clear : function() {
 				this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -72,9 +75,4 @@ function moveleft() {
 
 function moveright() {
 		myGamePiece.speedX += 1;
-}
-
-
-function start() {
-  canvas = new redBlock (20, 20, "red", 5, 50);
 }
