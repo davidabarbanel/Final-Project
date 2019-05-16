@@ -7,10 +7,11 @@ var myGamePiece;
 
 //this part is creating the yellow block
 function startGame() {
-    myGamePiece = new component(60, 60, "yellow", 5, 100);
-    myGamePiece = new component(20, 20, "red", 5, 50);
+    myGamePiece = new yellowBlock(60, 60, "yellow", 5, 100);
+    myGamePiece = new redBlock(20, 20, "red", 5, 50)
 		myGameArea.start();
 }
+
 
 
 //creating canvas
@@ -28,8 +29,8 @@ var myGameArea = {
 		}
 }
 
-//velocity
-function component(width, height, color, x, y) {
+//characteristics of Yellow block
+function yellowBlock(width, height, color, x, y) {
 		this.width = width;
 		this.height = height;
 		this.speedX = 0;
@@ -41,6 +42,25 @@ function component(width, height, color, x, y) {
 				ctx.fillStyle = color;
 				ctx.fillRect(this.x, this.y, this.width, this.height);
 		}
+
+//characteristics of Red block
+function redBlock(width, height, color, x, y) {
+		this.width = width;
+		this.height = height;
+		this.speedX = 0;
+		this.speedY = 0;
+		this.x = x;
+		this.y = y;
+		this.update = function() {
+				ctx = myGameArea.context;
+				ctx.fillStyle = color;
+				ctx.fillRect(this.x, this.y, this.width, this.height);
+		}
+
+
+
+
+
 //updating speed
 		this.newPos = function() {
 				this.x += this.speedX;
