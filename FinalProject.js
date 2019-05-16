@@ -2,10 +2,12 @@ var player1 = document.getElementById("player1")
 var player2 = document.getElementById("player2")
 
 
+
+
+
 var myGamePiece;
 
-
-//this part is creating the yellow block
+//this part is creating the yellow block when game starts
 function startGame() {
     myGamePiece = new yellowBlock(60, 60, "yellow", 5, 100);
 		myGameArea.start();
