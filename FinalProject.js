@@ -4,11 +4,13 @@ var player2 = document.getElementById("player2")
 
 var myGamePiece;
 
+//this part is creating the yellow block
 function startGame() {
     myGamePiece = new component(60, 60, "yellow", 5, 100);
 		myGameArea.start();
 }
 
+//creating canvas
 var myGameArea = {
 		canvas : document.createElement("canvas"),
 		start : function() {
@@ -23,6 +25,7 @@ var myGameArea = {
 		}
 }
 
+//velocity
 function component(width, height, color, x, y) {
 		this.width = width;
 		this.height = height;
@@ -35,18 +38,21 @@ function component(width, height, color, x, y) {
 				ctx.fillStyle = color;
 				ctx.fillRect(this.x, this.y, this.width, this.height);
 		}
+//updating speed
 		this.newPos = function() {
 				this.x += this.speedX;
 				this.y += this.speedY;
 		}
 }
 
+//updating game area
 function updateGameArea() {
 		myGameArea.clear();
 		myGamePiece.newPos();
 		myGamePiece.update();
 }
 
+//movement of yellow block
 function moveup() {
 		myGamePiece.speedY -= 1;
 }
