@@ -2,9 +2,6 @@ var player1 = document.getElementById("player1")
 var player2 = document.getElementById("player2")
 
 
-
-
-
 var myGamePiece;
 
 //this part is creating the yellow block when game starts
@@ -75,4 +72,9 @@ function moveleft() {
 
 function moveright() {
 		myGamePiece.speedX += 1;
+}
+
+
+function start() {
+  canvas = new redBlock (20, 20, "red", 5, 50);
 }
