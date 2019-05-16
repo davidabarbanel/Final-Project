@@ -8,6 +8,7 @@ var myGamePiece;
 //this part is creating the yellow block
 function startGame() {
     myGamePiece = new component(60, 60, "yellow", 5, 100);
+    myGamePiece = new component(20, 20, "red", 5, 50)
 		myGameArea.start();
 }
 
