@@ -1,12 +1,11 @@
 var player1 = document.getElementById("player1")
 var player2 = document.getElementById("player2")
-
-
 var myGamePiece;
 
-//this part is creating the yellow block when game starts
+//this part is creating the blocks when the game starts
 function startGame() {
     myGamePiece = new yellowBlock(50, 50, "yellow", 5, 100);
+    myGamePiece = new redBlock(20, 20, "red", 5, 50);
 		myGameArea.start();
 }
 
@@ -21,9 +20,6 @@ var myGameArea = {
 				this.context = this.canvas.getContext("2d");
 				document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 				this.interval = setInterval(updateGameArea, 20);
-        // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-       context.arc(100,100,20,0,Math.PI*2,true); context.closePath();
-       context.fill();
 		},
 		clear : function() {
 				this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -43,6 +39,11 @@ function yellowBlock(width, height, color, x, y) {
 				ctx.fillStyle = color;
 				ctx.fillRect(this.x, this.y, this.width, this.height);
 		}
+
+//characteristics of Red block
+function redBlock(width, height, color, x, y) {
+
+    		}
 
 
 
