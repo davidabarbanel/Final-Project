@@ -1,4 +1,4 @@
-var myGamePiece = document.getElementById("myGamePiece");
+var myGamePiece;
 //var myGamePiece2 = document.getElementById("myGamePiece2");
 
 //this part is creating the blocks when the game starts
@@ -24,10 +24,6 @@ var myGameArea = {
 				this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 		}
 }
-
-// Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-// context.arc(100,100,20,0,Math.PI*2,true); context.closePath();
-// context.fill();
 
 
 //characteristics of Yellow block
