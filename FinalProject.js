@@ -1,5 +1,10 @@
+var player1 = document.getElementById("player1")
+var player2 = document.getElementById("player2")
+
 var myGamePiece;
-//var myGamePiece2 = document.getElementById("myGamePiece2");
+
+
+
 
 //this part is creating the blocks when the game starts
 function startGame() {
