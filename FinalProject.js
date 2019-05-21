@@ -59,7 +59,6 @@ function yellowBlock(width, height, color, x, y) {
 				this.x += this.speedX;
 				this.y += this.speedY;
 		}
-}
 
 //updating game area
 function updateGameArea() {
