@@ -1,9 +1,9 @@
-var myGamePiece1 = document.getElementById("player1")
+var myGamePiece = document.getElementById("player1")
 var myGamePiece2 = document.getElementById("player2")
 
 //this part is creating the blocks when the game starts
 function startGame() {
-    myGamePiece1 = new yellowBlock(50, 50, "yellow", 5, 200);
+    myGamePiece = new yellowBlock(50, 50, "yellow", 5, 200);
 //myGamePiece2 = new redBlock(10, 10, "red", 200, 200);
     myGameArea.start();
 }
@@ -63,23 +63,23 @@ function redBlock(width, height, color, x, y) {
 //updating game area
 function updateGameArea() {
 		myGameArea.clear();
-		myGamePiece1.newPos();
-		myGamePiece1.update();
+		myGamePiece.newPos();
+		myGamePiece.update();
 }
 
 //movement of yellow block
 function moveup() {
-		myGamePiece1.speedY -= 1;
+		myGamePiece.speedY -= 1;
 }
 
 function movedown() {
-		myGamePiece1.speedY += 1;
+		myGamePiece.speedY += 1;
 }
 
 function moveleft() {
-		myGamePiece1.speedX -= 1;
+		myGamePiece.speedX -= 1;
 }
 
 function moveright() {
-		myGamePiece1.speedX += 1;
+		myGamePiece.speedX += 1;
 }
