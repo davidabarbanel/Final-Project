@@ -5,7 +5,7 @@ var myGamePiece;
 //this part is creating the blocks when the game starts
 function startGame() {
     myGamePiece = new yellowBlock(50, 50, "yellow", 5, 200);
-    myGamePiece = new block(10, 10, "red", 200, 200);
+    myGamePiece = new redBlock(10, 10, "red", 200, 200);
     myGameArea.start();
 }
 
