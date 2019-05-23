@@ -2,14 +2,14 @@ var player1 = document.getElementById("player1")
 var player2 = document.getElementById("player2")
 
 var myGamePiece;
-var myGamePiece2;
+//var myGamePiece2;
 
 
 
 //this part is creating the blocks when the game starts
 function startGame() {
     myGamePiece = new yellowBlock(50, 50, "yellow", 5, 200);
-    myGamePiece2 = new redBlock(10, 10, "red", 200, 200);
+    //myGamePiece2 = new redBlock(10, 10, "red", 200, 200);
     myGameArea.start();
 }
 
@@ -46,7 +46,7 @@ function yellowBlock(width, height, color, x, y) {
 		}
 
 //characteristics of Red block
-  function redBlock(width, height, color, x, y) {
+  //function redBlock(width, height, color, x, y) {
   this.width = width;
   this.height = height;
   this.x = x;
