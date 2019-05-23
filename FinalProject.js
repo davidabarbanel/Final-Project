@@ -2,12 +2,14 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 
+//adding the square and score (two components)
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
 
+//creating canvas
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -26,6 +28,7 @@ var myGameArea = {
     }
 }
 
+//characteristics of my component
 function component(width, height, color, x, y, type) {
     this.type = type;
     this.width = width;
@@ -45,10 +48,14 @@ function component(width, height, color, x, y, type) {
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
+
+//updating position
     this.newPos = function() {
         this.x += this.speedX;
         this.y += this.speedY;
     }
+
+
     this.crashWith = function(otherobj) {
         var myleft = this.x;
         var myright = this.x + (this.width);
@@ -74,6 +81,8 @@ function updateGameArea() {
             return;
         }
     }
+
+//this part is creating the obstacles
     myGameArea.clear();
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
@@ -92,6 +101,8 @@ function updateGameArea() {
         myObstacles[i].newPos();
         myObstacles[i].update();
     }
+
+//https://www.youtube.com/watch?v=f8iZnMVkmNA (this is a link to the video I copied off)
     myScore.text="SCORE: " + myGameArea.frameNo;
     myScore.update();
     myGamePiece.newPos();
@@ -103,6 +114,7 @@ function everyinterval(n) {
     return false;
 }
 
+//movement of square
 function moveup() {
     myGamePiece.speedY = -1;
 }
