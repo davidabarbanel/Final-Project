@@ -4,7 +4,7 @@ var myPoints;
 
 //adding the square and points (two components)
 function startGame() {
-    myGamePiece = new component(20, 20, "maroon", 10, 120);
+    myGamePiece = new component(20, 20, "blue", 10, 120);
     myPoints = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
@@ -93,8 +93,8 @@ function updateGameArea() {
         minGap = 50;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "blue", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "blue", x, height + gap));
+        myObstacles.push(new component(10, height, "maroon", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "maroon", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].speedX = -1;
