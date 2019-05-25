@@ -2,30 +2,6 @@ var myGamePiece;
 var myObstacles = [];
 var myPoints;
 
-//updating position
-    this.newPos = function() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-    }
-
-
-    this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
-        }
-        return crash;
-    }
-}
-
 //adding the square and points (two components)
 function startGame() {
     myGamePiece = new component(20, 20, "red", 10, 120);
@@ -72,6 +48,30 @@ function component(width, height, color, x, y, type) {
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
+
+//updating position
+    this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+    }
+
+
+    this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+            crash = false;
+        }
+        return crash;
+    }
+}
 
 function updateGameArea() {
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
