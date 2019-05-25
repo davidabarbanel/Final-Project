@@ -4,7 +4,7 @@ var myPoints;
 
 //adding the square and points (two components)
 function startGame() {
-    myGamePiece = new component(20, 20, "red", 10, 120);
+    myGamePiece = new component(20, 20, "black", 10, 120);
     myPoints = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
