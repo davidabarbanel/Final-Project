@@ -82,7 +82,7 @@ function updateGameArea() {
         }
     }
 
-//this part is creating the obstacles (part of this was taken from a video)
+//this part is creating the obstacles (part of this was taken from a video) (here is the link: "https://www.reddit.com/r/learnjavascript/comments/7kn5af/how_to_make_a_simple_obstacle_game_using/")
     myGameArea.clear();
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
