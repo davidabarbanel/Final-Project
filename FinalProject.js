@@ -1,11 +1,11 @@
 var myGamePiece;
 var myObstacles = [];
-var myScore;
+var myPoints;
 
-//adding the square and score (two components)
+//adding the square and points (two components)
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    myPoints = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
 
@@ -82,7 +82,7 @@ function updateGameArea() {
         }
     }
 
-//this part is creating the obstacles
+//this part is creating the obstacles (part of this was taken from a video)
     myGameArea.clear();
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
@@ -102,9 +102,9 @@ function updateGameArea() {
         myObstacles[i].update();
     }
 
-//https://www.youtube.com/watch?v=f8iZnMVkmNA (this is a link to the video I copied off)
-    myScore.text="SCORE: " + myGameArea.frameNo;
-    myScore.update();
+//this is the points and updating position of myGamePiece
+    myPoints.text="Points: " + myGameArea.frameNo;
+    myPoints.update();
     myGamePiece.newPos();
     myGamePiece.update();
 }
