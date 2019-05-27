@@ -1,7 +1,6 @@
 var myGamePiece;
 var myObstacles = [];
 var myPoints;
-var myHighScore;
 
 
 //adding the square and points (two components)
