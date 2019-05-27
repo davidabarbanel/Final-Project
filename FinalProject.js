@@ -1,6 +1,11 @@
 var myGamePiece;
 var myObstacles = [];
 var myPoints;
+var myHighScore = 3844;
+
+if (score > parseInt(localStorage.getItem('highscore'), 10)) {
+  localStorage.setItem('highscore', score);
+}
 
 //adding the square and points (two components)
 function startGame() {
