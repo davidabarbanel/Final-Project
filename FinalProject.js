@@ -55,7 +55,7 @@ function component(width, height, color, x, y, type) {
         this.y += this.speedY;
     }
 
-
+//if the square crashes (touches an obstacle) stop the game
     this.crashWith = function(otherobj) {
         var myleft = this.x;
         var myright = this.x + (this.width);
