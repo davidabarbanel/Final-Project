@@ -2,10 +2,11 @@ var myGamePiece;
 var myObstacles = [];
 var myPoints;
 
+
 //adding the square and points (two components)
 function startGame() {
     myGamePiece = new component(20, 20, "#9933ff", 10, 120);
-    myPoints = new component("30px", "Consolas", "black", 280, 40, "text");
+    myPoints = new component("30px", "Times New Roman", "black", 280, 40, "text");
     myGameArea.start();
 }
 
@@ -13,8 +14,8 @@ function startGame() {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 600;
-        this.canvas.height = 350;
+        this.canvas.width = 800;
+        this.canvas.height = 400;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -55,7 +56,7 @@ function component(width, height, color, x, y, type) {
         this.y += this.speedY;
     }
 
-
+//if the square crashes (touches an obstacle) stop the game
     this.crashWith = function(otherobj) {
         var myleft = this.x;
         var myright = this.x + (this.width);
@@ -88,10 +89,10 @@ function updateGameArea() {
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
         x = myGameArea.canvas.width;
         minHeight = 20;
-        maxHeight = 200;
+        maxHeight = 150;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 50;
-        maxGap = 200;
+        minGap = 100;
+        maxGap = 250;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
         myObstacles.push(new component(10, height, "maroon", x, 0));
         myObstacles.push(new component(10, x - height - gap, "maroon", x, height + gap));
