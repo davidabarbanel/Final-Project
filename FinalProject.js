@@ -114,7 +114,7 @@ function everyinterval(n) {
     return false;
 }
 
-//movement of square
+//movement of square (copied from;"https://www.w3schools.com/graphics/tryit.asp?filename=trygame_controllers_moving")
 function moveup() {
     myGamePiece.speedY = -1;
 }
